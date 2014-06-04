@@ -1,0 +1,12 @@
+{"ubuntu":{
+"mirror_site_url":"http://ftp.jaist.ac.jp/pub/Linux/ubuntu/",
+        "version": "12.04",
+        "need_deb_src": "false",
+        "need_update": "true"
+},
+"gengine":{
+"master": "1xb001.devops.test"
+}
+,
+"run_list":["ubuntu-change-source-list","apt","base","gengine"]
+}

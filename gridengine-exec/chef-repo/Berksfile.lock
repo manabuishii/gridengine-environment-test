@@ -1,0 +1,15 @@
+DEPENDENCIES
+  apt
+  gengine
+    git: git://github.com/manabuishii/gengine-chef-cookbook.git
+    revision: cb76783ba4ea5420b55be62b2751fd5ce52cb294
+  hostsfile
+  ubuntu-change-source-list
+    git: git://github.com/ywjno/ubuntu-change-source-list.git
+    revision: 7a289bc365cd179bdc8110136840184bc17cea2d
+
+GRAPH
+  apt (2.4.0)
+  gengine (0.5.0)
+  hostsfile (2.4.4)
+  ubuntu-change-source-list (0.1404.1)
