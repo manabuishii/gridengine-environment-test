@@ -1,23 +1,24 @@
 gridengine-environment-test
 ===========================
 
+set up 1xb001 as gridengine master
 ```
-# 1xb001
 cd gridengine-master
 vagrant up
 cd chef-repo
 knife  solo cook vagrant@192.168.33.110 -i ~/.vagrant.d/insecure_private_key nodes/192.168.33.110.json
 cd ../..
-# 1xrm01
+```
+setup 1xrm01 as gridengine exec
+```
 cd gridengine-exec
 vagrant up
 cd chef-repo
 knife  solo cook vagrant@192.168.33.111 -i ~/.vagrant.d/insecure_private_key nodes/192.168.33.111.json
-
 cd ../..
 ```
 
-install check
+check setup finish succefully
 
 ```
 cd gridengine-master
@@ -79,6 +80,7 @@ owner        vagrant
 project      NONE                
 department   defaultdepartment   
 jobname      echo.sge            
+[snip]
 ```
 check job execute 1xrm01
 
@@ -94,18 +96,17 @@ total 52
 vagrant@1xb001:~$ 
 ```
 
-exit 1xb001
+exit from 1xb001
 
 ```
 exit
 ```
 
+check exec node
+
 ```
 cd ..
 cd gridengine-exec
-```
-
-```
 vagrant ssh
 ```
 
