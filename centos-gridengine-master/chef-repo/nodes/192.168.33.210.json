@@ -1,0 +1,16 @@
+{
+"gengine":{
+        "role": "master",
+        "host_groups":{
+          "default":{
+            "nodes":[ "1xb001.devops.test", "1xrm01.devops.test" ]
+          }
+        },
+        "queues":{
+          "default":{
+            "hostlist": "@default"
+          }
+        }
+}
+,
+"run_list":["yum","base","gengine"]}

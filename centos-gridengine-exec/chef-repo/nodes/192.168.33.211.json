@@ -1,0 +1,7 @@
+{
+"gengine":{
+"master": "1xb001.devops.test"
+}
+,
+"run_list":["yum","base","gengine"]
+}
